@@ -14,7 +14,7 @@ use std::collections::HashMap;
 #[derive(Debug)]
 pub struct PsdLayer {
     /// The name of this layer
-    pub(super) name: String,
+    pub name: String,
     /// The channels of the layer, stored separately.
     ///
     /// You can combine these channels into a final image. For example, you might combine
@@ -22,19 +22,19 @@ pub struct PsdLayer {
     /// channel, or you might make use of the layer masks.
     ///
     /// Storing the channels separately allows for this flexability.
-    pub(super) channels: HashMap<PsdChannelKind, ChannelBytes>,
+    pub channels: HashMap<PsdChannelKind, ChannelBytes>,
     /// The position of the top of the image
-    pub(crate) layer_top: i32,
+    pub layer_top: i32,
     /// The position of the left of the image
-    pub(crate) layer_left: i32,
+    pub layer_left: i32,
     /// The position of the bottom of the image
-    pub(crate) layer_bottom: i32,
+    pub layer_bottom: i32,
     /// The position of the right of the image
-    pub(crate) layer_right: i32,
+    pub layer_right: i32,
     /// The width of the PSD
-    pub(crate) psd_width: u32,
+    pub psd_width: u32,
     /// The height of the PSD
-    pub(crate) psd_height: u32,
+    pub psd_height: u32,
 }
 
 /// An error when working with a PsdLayer
